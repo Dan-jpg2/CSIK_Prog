@@ -1,4 +1,4 @@
-from d1_to_6 import *
+from d1_to_3 import *
 
 if __name__ == '__main__':
     import csv

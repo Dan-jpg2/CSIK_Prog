@@ -1,4 +1,4 @@
-from d1_to_6 import *
+from d1_to_3 import *
 
 # Opgave d1_1
 def test_in_december_skips_other_months():
