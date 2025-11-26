@@ -155,3 +155,4 @@ min() og max() på timestamp-string virker her, fordi ISO 8601-datoer (yyyy-mm-d
 kan sammenlignes direkte som strenge.
 På den måde får vi fuld oversigt over alle loginforsøg pr. bruger."""
 
+## OPgave 4 med pipelines er lavet i seperat fil
