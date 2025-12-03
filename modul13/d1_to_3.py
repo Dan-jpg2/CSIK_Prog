@@ -34,6 +34,8 @@ def by_user(stream, username):
 # OPGAVE 2 HER FRA  
 
 #Opgave d2_1 -- as_dicts -- afbild til datastrøm af ordbøger
+# Denne funktion vil ikke som sådan ændre auth log hvis den køres på den
+# Da de 4 keys du tildeler, ikke vil blive vist. 
 def as_dicts(stream):
     for record in stream:
         yield{
