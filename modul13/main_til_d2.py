@@ -10,10 +10,7 @@ if __name__ == '__main__':
         writer.writeheader()
 
         stream = as_dicts(reader)
-        stream = with_boolean_results(stream)
-        stream = with_dates(stream)
-        stream = with_risk_scores(stream)
+
 
         for record in stream:
             writer.writerow(record)
-            
