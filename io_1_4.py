@@ -1,0 +1,26 @@
+import sqlite3
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("db_path", help="Sti til din SQL database")
+parser.add_argument("limit", type=int, help="antal loginforsøg der skal hentes")
+args = parser.parse_args()
+
+with sqlite3.connect(args.db_path) as connection:
+    stream = connection.execute(
+        """
+        select
+            h.name as hostname,
+            a.username,
+            a.timestamp,
+            a.result
+        from auth_logs a
+        join hosts h using (host_id)
+        limit ?
+        
+        """,
+        (args.limit,)
+    )
+    parser.print_help()
+    for row in stream:
+        print(row)
