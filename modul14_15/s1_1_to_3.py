@@ -10,7 +10,7 @@ with sqlite3.connect('hvedebro.sqlite') as connection:
     where username in ('poul', 'fatter')
     
     """
-    )
+    )   
 for row in stream:
     print(row)
     
